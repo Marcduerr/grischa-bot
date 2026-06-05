@@ -162,7 +162,8 @@ async function send() {
     });
     const data = await res.json();
     removeTyping();
-    addMsg('assistant', data.content?.[0]?.text || 'Entschuldigung, bitte versuchen Sie es erneut.');
+    const text = data?.content?.[0]?.text || data?.error?.message || 'Keine Antwort erhalten';
+addMsg('assistant', text);
   } catch(e) {
     removeTyping();
     addMsg('assistant', 'Verbindungsfehler. Bitte kontaktieren Sie uns direkt: +41 81 322 85 85');
