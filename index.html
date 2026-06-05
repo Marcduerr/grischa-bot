@@ -162,7 +162,7 @@ async function send() {
     });
     const data = await res.json();
     removeTyping();
-    const text = data?.content?.[0]?.text || data?.error?.message || 'Keine Antwort erhalten';
+    const text = data.content && data.content[0] ? data.content[0].text : 'Bitte kontaktieren Sie uns: +41 81 322 85 85';
 addMsg('assistant', text);
   } catch(e) {
     removeTyping();
