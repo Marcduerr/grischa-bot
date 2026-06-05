@@ -147,7 +147,7 @@ async function send(){
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify({
-        model:'claude-sonnet-4-20250514',
+        model:'claude-sonnet-4-5',
         max_tokens:1000,
         system:SYSTEM,
         messages:msgs.map(m=>({role:m.role==='assistant'?'assistant':'user',content:m.content}))
