@@ -9,6 +9,9 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;background:#e8eaed;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:16px}
 
+/* ===== FARBEN ===== */
+/* Primär Dunkelblau: #1a2e4a | Akzent Türkis: #2ABFBF */
+
 /* ===== CHAT CONTAINER ===== */
 #chat{width:460px;max-height:760px;height:90vh;background:#fff;border-radius:12px;box-shadow:0 12px 48px rgba(0,0,0,0.18);display:flex;flex-direction:column;overflow:hidden}
 
@@ -21,7 +24,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;ba
 .hstatus{font-size:11px;color:rgba(255,255,255,0.65);display:flex;align-items:center;gap:5px;margin-top:2px}
 .dot{width:6px;height:6px;background:#4ade80;border-radius:50%;animation:pulse 2s infinite;flex-shrink:0}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
-#header-bar{background:#c8151e;height:3px;width:100%}
+#header-bar{background:#2ABFBF;height:3px;width:100%}
 
 /* ===== MESSAGES ===== */
 #messages{flex:1;overflow-y:auto;padding:18px 16px;display:flex;flex-direction:column;gap:14px;background:#f5f6f8;scroll-behavior:smooth}
@@ -36,17 +39,16 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;ba
 .bubble{padding:11px 15px;border-radius:16px;font-size:13.5px;line-height:1.6;white-space:pre-wrap;word-break:break-word}
 .bot .bubble{background:#fff;border:1px solid #e2e4e8;border-radius:3px 16px 16px 16px;color:#1a1a2e;box-shadow:0 1px 4px rgba(0,0,0,0.07)}
 .user .bubble{background:#1a2e4a;color:#fff;border-radius:16px 3px 16px 16px}
-.mav{width:30px;height:30px;background:#c8151e;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:#fff;flex-shrink:0;margin-top:2px;letter-spacing:0.5px}
+.mav{width:30px;height:30px;background:#2ABFBF;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:#fff;flex-shrink:0;margin-top:2px;letter-spacing:0.5px}
 
 /* ===== WELCOME CARD ===== */
 .welcome-card{background:#fff;border:1px solid #e2e4e8;border-radius:3px 16px 16px 16px;padding:14px 16px;font-size:13.5px;color:#1a1a2e;box-shadow:0 1px 4px rgba(0,0,0,0.07);line-height:1.6}
-.welcome-card .wc-title{font-size:15px;font-weight:700;color:#1a2e4a;margin-bottom:10px;display:flex;align-items:center;gap:8px}
-.welcome-card .wc-title span{background:#c8151e;color:#fff;font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;letter-spacing:0.5px}
+.welcome-card .wc-title{font-size:15px;font-weight:700;color:#1a2e4a;margin-bottom:10px}
 .welcome-card ul{list-style:none;margin:0 0 12px 0;padding:0;display:flex;flex-direction:column;gap:5px}
 .welcome-card ul li{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:#333}
-.welcome-card ul li::before{content:'✓';color:#1a2e4a;font-weight:700;font-size:12px;margin-top:1px;flex-shrink:0}
-.welcome-card .wc-upload{background:#f0f3f8;border:1px dashed #1a2e4a;border-radius:8px;padding:10px 12px;display:flex;align-items:center;gap:10px;margin-bottom:10px;cursor:pointer;transition:background 0.15s}
-.welcome-card .wc-upload:hover{background:#e4e9f2}
+.welcome-card ul li::before{content:'✓';color:#2ABFBF;font-weight:700;font-size:12px;margin-top:1px;flex-shrink:0}
+.welcome-card .wc-upload{background:#f0f8f8;border:1.5px dashed #2ABFBF;border-radius:8px;padding:10px 12px;display:flex;align-items:center;gap:10px;margin-bottom:10px;cursor:pointer;transition:background 0.15s}
+.welcome-card .wc-upload:hover{background:#e0f4f4}
 .welcome-card .wc-upload .icon{font-size:20px;flex-shrink:0}
 .welcome-card .wc-upload .text strong{display:block;font-size:13px;font-weight:600;color:#1a2e4a}
 .welcome-card .wc-upload .text span{font-size:11px;color:#666}
@@ -57,19 +59,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;ba
 .chip{font-size:11.5px;padding:5px 10px;border-radius:6px;border:1px solid #dde1e8;background:#f8f9fb;color:#1a2e4a;cursor:pointer;transition:all 0.15s;line-height:1.3}
 .chip:hover{background:#1a2e4a;color:#fff;border-color:#1a2e4a}
 
-/* ===== SUMMARY CARD ===== */
-.summary-card{background:#f0f4f8;border:1px solid #c8d4e0;border-radius:8px;padding:12px 14px;font-size:13px;margin-top:4px}
-.summary-card h4{font-size:13px;font-weight:700;color:#1a2e4a;margin-bottom:8px;display:flex;align-items:center;gap:6px}
-.summary-card table{width:100%;border-collapse:collapse}
-.summary-card td{padding:3px 0;font-size:12.5px;color:#333;vertical-align:top}
-.summary-card td:first-child{font-weight:600;color:#1a2e4a;width:110px;flex-shrink:0}
-.summary-card .sc-footer{margin-top:10px;padding-top:8px;border-top:1px solid #c8d4e0;font-size:12px;color:#555;display:flex;flex-direction:column;gap:3px}
-.summary-card .sc-footer span{display:flex;align-items:center;gap:6px}
-.summary-card .sc-footer span::before{content:'✓';color:#1a2e4a;font-weight:700}
-
 /* ===== FILE BUBBLE ===== */
 .file-msg{background:#fff;border:1px solid #e2e4e8;border-radius:3px 16px 16px 16px;padding:10px 14px;display:flex;align-items:center;gap:10px;box-shadow:0 1px 4px rgba(0,0,0,0.07)}
-.file-msg .fi{width:34px;height:34px;background:#f0f3f8;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;color:#1a2e4a}
+.file-msg .fi{width:34px;height:34px;background:#f0f8f8;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;color:#1a2e4a}
 .file-msg .fn{font-weight:600;font-size:13px;color:#1a2e4a}
 .file-msg .fs{font-size:11px;color:#888;margin-top:2px}
 
@@ -82,44 +74,35 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;ba
 
 /* ===== QUICK ACTIONS ===== */
 #qr{padding:10px 14px;display:flex;gap:6px;flex-wrap:wrap;background:#fff;border-top:1px solid #eee;flex-shrink:0}
-.qb{font-size:11.5px;padding:6px 11px;border-radius:6px;border:1.5px solid #1a2e4a;background:#fff;color:#1a2e4a;cursor:pointer;white-space:nowrap;transition:all 0.15s;font-weight:600;letter-spacing:0.1px}
+.qb{font-size:11.5px;padding:6px 11px;border-radius:6px;border:1.5px solid #1a2e4a;background:#fff;color:#1a2e4a;cursor:pointer;white-space:nowrap;transition:all 0.15s;font-weight:600}
 .qb:hover{background:#1a2e4a;color:#fff}
-.qb.red{border-color:#c8151e;color:#c8151e}
-.qb.red:hover{background:#c8151e;color:#fff}
+.qb.accent{border-color:#2ABFBF;color:#2ABFBF}
+.qb.accent:hover{background:#2ABFBF;color:#fff}
 
 /* ===== TOOLBAR ===== */
 #toolbar{display:flex;align-items:center;gap:8px;padding:10px 14px 0;background:#fff;border-top:1px solid #f0f0f0;flex-shrink:0}
 #file-input{display:none}
 #file-btn{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:7px;border:1.5px solid #1a2e4a;background:#fff;color:#1a2e4a;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.15s;flex-shrink:0}
 #file-btn:hover{background:#1a2e4a;color:#fff}
-#file-preview{flex:1;font-size:12px;color:#c8151e;font-weight:500;display:none;align-items:center;gap:6px;overflow:hidden}
+#file-preview{flex:1;font-size:12px;color:#2ABFBF;font-weight:500;display:none;align-items:center;gap:6px;overflow:hidden}
 #file-preview span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 #file-clear{background:none;border:none;color:#999;cursor:pointer;font-size:18px;flex-shrink:0;line-height:1}
 
 /* ===== INPUT ROW ===== */
 #input-row{display:flex;gap:8px;padding:10px 14px 14px;background:#fff;flex-shrink:0}
 #inp{flex:1;padding:10px 14px;border-radius:8px;border:1.5px solid #dde1e8;font-size:13.5px;font-family:inherit;background:#f8f9fb;transition:border 0.15s;color:#1a1a2e}
-#inp:focus{outline:none;border-color:#1a2e4a;background:#fff}
+#inp:focus{outline:none;border-color:#2ABFBF;background:#fff}
 #btn{width:40px;height:40px;border-radius:8px;border:none;background:#1a2e4a;color:#fff;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;transition:all 0.15s;flex-shrink:0}
-#btn:hover{background:#c8151e}
+#btn:hover{background:#2ABFBF}
 #btn:disabled{opacity:0.35;cursor:not-allowed}
 
 /* ===== FOOTER ===== */
 #footer{font-size:10.5px;color:#bbb;text-align:center;padding:0 0 10px;background:#fff;letter-spacing:0.2px;flex-shrink:0}
-
-/* ===== LEAD FORM ===== */
-.lead-form{background:#fff;border:1px solid #e2e4e8;border-radius:8px;padding:14px;font-size:13px;margin-top:4px}
-.lead-form h4{font-size:13px;font-weight:700;color:#1a2e4a;margin-bottom:10px}
-.lead-form input{width:100%;padding:8px 11px;border-radius:6px;border:1.5px solid #dde1e8;font-size:13px;font-family:inherit;margin-bottom:7px;background:#f8f9fb}
-.lead-form input:focus{outline:none;border-color:#1a2e4a;background:#fff}
-.lead-form button{width:100%;padding:10px;border-radius:6px;border:none;background:#1a2e4a;color:#fff;font-size:13px;font-weight:600;cursor:pointer;transition:background 0.15s}
-.lead-form button:hover{background:#c8151e}
 </style>
 </head>
 <body>
 <div id="chat">
 
-  <!-- HEADER -->
   <div id="header">
     <div id="header-main">
       <img class="logo" src="https://grischamechanik.ch/wp-content/uploads/2018/05/grischamechanik_logo.png" alt="Grischa Mechanik" onerror="this.style.display='none'"/>
@@ -131,145 +114,110 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;ba
     <div id="header-bar"></div>
   </div>
 
-  <!-- MESSAGES -->
   <div id="messages"></div>
 
-  <!-- QUICK ACTIONS -->
   <div id="qr">
-    <button class="qb red" onclick="sendQ('Ich möchte eine Offerte anfragen')">Offerte anfragen</button>
-    <button class="qb" onclick="sendQ('Machbarkeit prüfen')">Machbarkeit prüfen</button>
-    <button class="qb" onclick="triggerUpload()">Zeichnung hochladen</button>
-    <button class="qb" onclick="sendQ('Lieferzeit anfragen')">Lieferzeit</button>
-    <button class="qb" onclick="sendQ('Welche Materialien und Verfahren bieten Sie an?')">Material & Verfahren</button>
+    <button class="qb accent" onclick="sendQ('Ich möchte eine Offerte anfragen')">Offerte anfragen</button>
+    <button class="qb" onclick="sendQ('Ist dieses Mass auf Ihrer Maschine fertigbar?')">Machbarkeit prüfen</button>
+    <button class="qb" onclick="sendQ('Welche Toleranzen können Sie einhalten?')">Toleranzen</button>
+    <button class="qb" onclick="sendQ('Wie lange ist die Lieferzeit?')">Lieferzeit</button>
+    <button class="qb" onclick="sendQ('Welche Materialien verarbeiten Sie?')">Materialien</button>
+    <button class="qb" onclick="sendQ('Können Sie Serien und Prototypen fertigen?')">Serie / Prototyp</button>
   </div>
 
-  <!-- FILE TOOLBAR -->
   <div id="toolbar">
     <input type="file" id="file-input" accept=".pdf,.step,.stp,.dxf,.dwg,.png,.jpg,.jpeg" onchange="fileSelected()"/>
-    <button id="file-btn" onclick="triggerUpload()">📎 Datei anhängen</button>
+    <button id="file-btn" onclick="document.getElementById('file-input').click()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48"/></svg>
+      Datei anhängen
+    </button>
     <div id="file-preview">
       <span id="file-name"></span>
       <button id="file-clear" onclick="clearFile()">×</button>
     </div>
   </div>
 
-  <!-- INPUT -->
   <div id="input-row">
     <input type="text" id="inp" placeholder="Ihre Anfrage..." onkeydown="if(event.key==='Enter')send()"/>
-    <button id="btn" onclick="send()">➤</button>
+    <button id="btn" onclick="send()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </div>
   <div id="footer">Grischa Mechanik AG · Landquart · grischamechanik.ch</div>
 
 </div>
 
 <script>
-// ===== SYSTEM PROMPT =====
-const SYSTEM = `Du bist der digitale Verkaufs- und Technikassistent der Grischa Mechanik AG in Landquart, Graubünden, Schweiz. Du verhältst dich wie ein erfahrener technischer Sachbearbeiter und Verkaufsmitarbeiter. Professionell, präzise, hilfsbereit.
+const SYSTEM = `Du bist der digitale Verkaufs- und Technikassistent der Grischa Mechanik AG in Landquart, Graubünden, Schweiz. Du verhältst dich wie ein erfahrener technischer Sachbearbeiter. Professionell, präzise, hilfsbereit. Kein Markdown, keine Sternchen, keine Fettschrift-Marker. Nur sauberer Fliesstext mit Zeilenumbrüchen.
 
 ÜBER GRISCHA MECHANIK AG:
-- Standort: Riedlöserstrasse 9, CH-7302 Landquart (Hauptstandort, alle Maschinen seit 2025 zusammengeführt)
+- Standort: Riedlöserstrasse 9, CH-7302 Landquart
 - Mitarbeitende: ca. 50 Personen, über 30 Jahre Erfahrung
 - Telefon: +41 81 322 85 85 | E-Mail: info@grischamechanik.ch
-- Öffnungszeiten: Mo–Fr 07:00–17:00 Uhr
+- Öffnungszeiten: Mo-Fr 07:00-17:00 Uhr
 - Kunden: Maschinenindustrie In-/Ausland, KMUs, Grossbetriebe, Engineeringfirmen
-- ISO-zertifiziert, 0-Fehler-Strategie, Vier-Augen-Prinzip
+- Qualität: 0-Fehler-Strategie, Vier-Augen-Prinzip, Messprotokolle auf Wunsch
 
-FERTIGUNGSVERFAHREN & MASCHINENPARK:
-1. FRÄSEN: Max. 4000×2800×1500mm. 5-Achs und 3-Achs.
-   - DN Solution DVF5000 (2023, 5-Achs, 32-Paletten-Automation, Heidenhain TNC640)
-   - AXA VPC U (5-Achs, 3400×2200×1100mm)
-   - Kao Ming KMC-4000 (3-Achs, 4000×2800×775mm)
-   - Quaser MV-184/154 (4×, mit Pick&Place Roboter)
-   - Finetech GTX-620, Awea FCV-620, YCM DCV2018A-5AX, AXA VSC, Eumach, Rima Mill
-2. DREHEN: Hartdrehen, ab Stange, Futter-, Karussell-, Vertikaldrehen.
-   - Neu 2025: Muratec MT200, Puma 3100
-3. ERODIEREN: Draht- und Senkerodieren (seit 2025 intern, übernommen von Formtec)
-4. SCHLEIFEN: Erstklassige Oberflächengüte, exakte Parallelitäten
-5. SCHWEISSEN: MIG/MAG/TIG und Löten, Konstruktionen bis 1000kg
-6. MESSEN: Modernste Messtechnik, Messprotokolle auf Wunsch
-7. LASERN: Trotec Speedmarker 700, Gravuren/Beschriftungen auf allen Materialien
-8. 3D DRUCK: ProJET MJP 2500 (Prototypen, Funktionsmuster, Messprogramm-Vorbereitung)
-9. MONTAGE: Einbaufertige Baugruppen, Hydraulik, Pneumatik, Elektronik
+FERTIGUNGSVERFAHREN:
+1. FRÄSEN: Max. 4000x2800x1500mm. 5-Achs und 3-Achs. DN Solution DVF5000 (2023, 32-Paletten-Automation), AXA VPC U (3400x2200x1100mm), Kao Ming KMC-4000 (4000x2800mm), Quaser MV-184/154 mit Pick&Place Roboter.
+2. DREHEN: Hartdrehen, ab Stange, Futter-, Karussell-, Vertikaldrehen. Neu: Muratec MT200, Puma 3100.
+3. ERODIEREN: Draht- und Senkerodieren (seit 2025 intern).
+4. SCHLEIFEN: Erstklassige Oberflächengüte, exakte Parallelitäten.
+5. SCHWEISSEN: MIG/MAG/TIG, bis 1000kg.
+6. MESSEN: Modernste Messtechnik, Messprotokolle auf Wunsch.
+7. LASERN: Trotec Speedmarker 700.
+8. 3D DRUCK: ProJET MJP 2500 für Prototypen.
+9. MONTAGE: Einbaufertige Baugruppen inkl. Hydraulik, Pneumatik, Elektronik.
 
-MATERIALIEN: Automatenstähle, CrNi-Stähle (1.4404, 1.4301 etc.), Aluminium (EN AW-7075, 6061, 5083 etc.), Buntmetalle (Messing, Kupfer, Bronze), Guss, Titan auf Anfrage, Sonderqualitäten
-
-TECHNISCHE BEGRIFFE (erkenne und reagiere korrekt):
-H7/g6 Passungen, IT-Toleranzklassen, Ra-Werte, Parallelität, Rechtwinkligkeit, GD&T, STEP/IGES/DXF Dateiformate, Harteloxierung (extern vergeben), Verzinken, Pulverbeschichten (extern), Gewindeschneiden intern möglich, Sacklöcher, Dichtflächen, Freistiche
-
-CONVERSATIONAL SALES FLOW:
-Wenn Kunde eine Anfrage stellt (Frästeil, Drehteil, Bauteil etc.), stelle strukturierte Rückfragen:
-1. Material?
-2. Abmessungen / Grösse?
-3. Stückzahl (Prototyp oder Serie)?
-4. Toleranzen / kritische Masse?
-5. Oberfläche nötig?
-6. Zeichnung / STEP vorhanden?
-7. Gewünschter Liefertermin?
-Stelle max. 2-3 Fragen auf einmal, nicht alle auf einmal.
-
-LEAD-QUALIFIZIERUNG:
-Wenn Kunde ernsthaftes Interesse zeigt oder eine konkrete technische Anfrage stellt, frage nach:
-- Name und Firma
-- E-Mail-Adresse
-- Telefon (optional)
-Mit Begründung: "Damit wir Ihre Anfrage intern prüfen und eine Offerte erstellen können."
+MATERIALIEN: Automatenstähle, CrNi-Stähle (1.4404, 1.4301), Aluminium (EN AW-7075, 6061, 5083), Buntmetalle, Guss, Sonderqualitäten.
 
 VERHALTEN:
-- Immer auf Deutsch (ausser Kunde schreibt Englisch/Französisch/Italienisch → dann in dieser Sprache antworten)
-- Professionell, präzise, keine unnötigen langen Texte
-- Keine konkreten Preisangaben — immer Offerte empfehlen
-- Wenn technisch unklar: ehrlich nachfragen statt halluzinieren
-- Am Ende qualifizierter Anfragen: Zusammenfassung erstellen
-- Bei Datei-Upload: Bestätige Erhalt, erkläre nächste Schritte
-- Kein "AI"-Sprech. Kein "Als KI kann ich...". Verhalt dich wie ein Mensch.`;
+- Immer auf Deutsch. Wenn Kunde in anderer Sprache schreibt, in dieser Sprache antworten.
+- Kein Markdown. Keine Sternchen. Keine Fettschrift-Marker wie **Text**. Nur normaler Text.
+- Professionell aber persönlich. Kurze, präzise Antworten.
+- Keine Preisangaben. Immer Offerte empfehlen.
+- Bei konkreten Anfragen: strukturiert nachfragen (Material, Masse, Stückzahl, Toleranzen, Liefertermin).
+- Stelle maximal 2-3 Fragen gleichzeitig.
+- Wenn Kunde ernsthaftes Interesse zeigt: Name, Firma, E-Mail erfragen.
+- Harteloxierung: extern vergeben, koordinieren wir.
+- Was du nicht weisst: ehrlich sagen, an info@grischamechanik.ch verweisen.`;
 
-// ===== STATE =====
 const msgs = [];
 let busy = false;
 let selectedFile = null;
-let leadCollected = false;
-let currentLead = {};
 
-// ===== INIT =====
 window.onload = () => {
   const wrap = document.createElement('div');
   wrap.className = 'msg bot';
   const av = document.createElement('div');
-  av.className = 'mav'; av.textContent = 'GM';
-  wrap.appendChild(av);
-
+  av.className = 'mav'; av.textContent = 'GM'; wrap.appendChild(av);
   const card = document.createElement('div');
   card.className = 'welcome-card';
   card.innerHTML = `
-    <div class="wc-title">Schnell zur passenden Fertigungslösung <span>NEU</span></div>
+    <div class="wc-title">Schnell zur passenden Fertigungslösung</div>
     <ul>
-      <li>Fertigungsmöglichkeiten prüfen</li>
+      <li>Fertigungsmöglichkeiten und Machbarkeit prüfen</li>
       <li>Offerten schneller vorbereiten</li>
-      <li>Materialien &amp; Verfahren finden</li>
-      <li>Technische Fragen zu Fräsen &amp; Drehen</li>
+      <li>Materialien und Verfahren finden</li>
+      <li>Technische Fragen zu Fräsen, Drehen, Erodieren</li>
     </ul>
-    <div class="wc-upload" onclick="triggerUpload()">
+    <div class="wc-upload" onclick="document.getElementById('file-input').click()">
       <div class="icon">📐</div>
       <div class="text">
         <strong>Zeichnung oder STEP-Datei hochladen</strong>
-        <span>PDF, STEP, DXF · Für Machbarkeitsprüfung oder Offerte</span>
+        <span>PDF, STEP, DXF — für Machbarkeitsprüfung oder Offerte</span>
       </div>
     </div>
     <div class="wc-footer">Wie kann ich Sie unterstützen?</div>
     <div class="example-chips">
-      <span class="chip" onclick="sendQ('Kann ich Aluminium 7075 mit ±0.01mm fertigen lassen?')">Aluminium 7075 ±0.01mm?</span>
-      <span class="chip" onclick="sendQ('Ich brauche kurzfristig 50 Frästeile – ist das möglich?')">50 Frästeile kurzfristig?</span>
-      <span class="chip" onclick="triggerUpload()">STEP-Datei hochladen</span>
-      <span class="chip" onclick="sendQ('Wie schnell erhalte ich eine Offerte?')">Offerte wie schnell?</span>
+      <span class="chip" onclick="sendQ('Können Sie Aluminium EN AW-7075 mit Toleranz H7 fräsen?')">Alu 7075 / H7 Passung</span>
+      <span class="chip" onclick="sendQ('Welche maximale Bauteilgrösse können Sie fräsen?')">Max. Bauteilgrösse</span>
+      <span class="chip" onclick="sendQ('Ich benötige 50 Frästeile kurzfristig — was ist die früheste Lieferzeit?')">Kurzfristige Lieferung</span>
+      <span class="chip" onclick="sendQ('Können Sie Prototypen und anschliessend Serienteile fertigen?')">Prototyp zu Serie</span>
     </div>`;
   wrap.appendChild(card);
   document.getElementById('messages').appendChild(wrap);
 };
-
-// ===== FILE HANDLING =====
-function triggerUpload() {
-  document.getElementById('file-input').click();
-}
 
 function fileSelected() {
   const f = document.getElementById('file-input').files[0];
@@ -285,7 +233,6 @@ function clearFile() {
   document.getElementById('file-preview').style.display = 'none';
 }
 
-// ===== RENDER MESSAGES =====
 function addMsg(role, text) {
   msgs.push({ role, content: text });
   const w = document.createElement('div');
@@ -308,23 +255,9 @@ function addFileMsg(filename, size) {
   const b = document.createElement('div');
   b.className = 'file-msg';
   const ext = filename.split('.').pop().toUpperCase();
-  b.innerHTML = `<div class="fi">${ext === 'PDF' ? '📄' : ext === 'STEP' || ext === 'STP' ? '⚙️' : '📐'}</div><div><div class="fn">${filename}</div><div class="fs">${(size/1024).toFixed(1)} KB · Erhalten</div></div>`;
+  const icon = ext === 'PDF' ? '📄' : (ext === 'STEP' || ext === 'STP') ? '⚙️' : '📐';
+  b.innerHTML = `<div class="fi">${icon}</div><div><div class="fn">${filename}</div><div class="fs">${(size/1024).toFixed(1)} KB · Erhalten</div></div>`;
   w.appendChild(b);
-  document.getElementById('messages').appendChild(w);
-  document.getElementById('messages').scrollTop = 99999;
-}
-
-function addSummaryCard(summaryData) {
-  const w = document.createElement('div');
-  w.className = 'msg bot';
-  const a = document.createElement('div');
-  a.className = 'mav'; a.textContent = 'GM'; w.appendChild(a);
-  const card = document.createElement('div');
-  card.className = 'summary-card';
-  let rows = '';
-  summaryData.forEach(r => { rows += `<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`; });
-  card.innerHTML = `<h4>📋 Ihre Anfrage im Überblick</h4><table>${rows}</table><div class="sc-footer"><span>Anfrage wurde vorbereitet</span><span>Weiterleitung an Technik / Verkauf</span></div>`;
-  w.appendChild(card);
   document.getElementById('messages').appendChild(w);
   document.getElementById('messages').scrollTop = 99999;
 }
@@ -347,7 +280,6 @@ function removeTyping() {
   if (el) el.remove();
 }
 
-// ===== SEND =====
 async function send() {
   if (busy) return;
   const inp = document.getElementById('inp');
@@ -360,7 +292,7 @@ async function send() {
     addFileMsg(selectedFile.name, selectedFile.size);
     userMsg = text
       ? `${text}\n\n[Datei hochgeladen: ${selectedFile.name} (${(selectedFile.size/1024).toFixed(1)} KB)]`
-      : `[Datei hochgeladen: ${selectedFile.name}] Bitte prüfen Sie die Machbarkeit für dieses Teil.`;
+      : `[Datei hochgeladen: ${selectedFile.name}] Bitte prüfen Sie die Machbarkeit.`;
     clearFile();
   }
   if (userMsg) addMsg('user', userMsg);
@@ -386,7 +318,7 @@ async function send() {
       ? json.content[0].text
       : 'Bitte kontaktieren Sie uns direkt: +41 81 322 85 85';
     addMsg('assistant', reply);
-  } catch (e) {
+  } catch(e) {
     removeTyping();
     addMsg('assistant', 'Verbindungsfehler. Bitte kontaktieren Sie uns: +41 81 322 85 85');
   }
