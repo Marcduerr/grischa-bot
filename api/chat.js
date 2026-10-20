@@ -31,8 +31,10 @@ function rateLimited(ip) {
 
 function cleanMessages(input) {
   if (!Array.isArray(input) || input.length === 0) return null;
-  const msgs = input.slice(-MAX_MESSAGES).map(m => ({
-    role: m && m.role === 'assistant' ? 'assistant' : 'user',
+  const msgs = input.slice(-MAX_MESSAGES)
+    .filter(m => m && (m.role === 'user' || m.role === 'assistant'))
+    .map(m => ({
+    role: m.role,
     content: typeof (m && m.content) === 'string' ? m.content.slice(0, MAX_MESSAGE_CHARS) : '',
   })).filter(m => m.content.trim().length > 0);
 
